@@ -19,7 +19,7 @@ class Scanner:
 
 	def getSigs(self):
 		for sig in self.sig_file:
-			self.sigs.append(sig)
+			self.sigs.append(sig.rstrip())
 
 	def traverse(self):
 		"""
