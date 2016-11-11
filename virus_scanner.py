@@ -38,9 +38,12 @@ class Scanner:
 
 	def openFile(self, path):
 		try:
-			file = open(path)
-		except IOError:
+			file = open(path, 'rb')
+		except IOError, e:
+                        print path
+                        print e
 			print "Error: File does not appear to exist."
+			exit = raw_input('press ENTER to exit...')
 			sys.exit(1)
 		return file
 
@@ -61,3 +64,4 @@ if __name__ == '__main__':
 	s.printSigs()
 	s.traverse()
 	s.printMatches()
+        exit = raw_input('press ENTER to exit...')
