@@ -30,8 +30,9 @@ class Scanner:
 			for name in files:
 				path = join(root, name)
 				file = self.openFile(path)
+				file_string = file.read()
 				for sig in self.sigs:
-					if sig in file.read():
+					if sig in file_string:
 						self.matches[path].append(sig)
 
 	def openFile(self, path):
