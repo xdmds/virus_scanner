@@ -5,6 +5,7 @@ for signatures from a given signature file
 """
 import os
 from os.path import join
+import sys
 from collections import defaultdict
 
 class Scanner:
